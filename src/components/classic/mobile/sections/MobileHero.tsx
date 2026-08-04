@@ -24,7 +24,7 @@ export function MobileHero() {
       <div
         className="absolute inset-0 bg-no-repeat"
         style={{
-          backgroundImage: "url(/images/classic/hero.jpeg)",
+          backgroundImage: "url(/images/classic/hero-bg.png)",
           backgroundSize: "auto 88%",
           backgroundPosition: "84% bottom",
         }}

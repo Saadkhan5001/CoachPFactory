@@ -10,10 +10,16 @@ export function Hero() {
       data-nav-theme="dark"
       className="relative z-[1] min-h-[100svh] w-full overflow-hidden bg-[#151d1f]"
     >
-      {/* Photographic background */}
+      {/* Photographic background — full-bleed cover, anchored to the
+          bottom so any overflow is trimmed from the empty space above his
+          head rather than his legs/feet. */}
       <div
-        className="absolute inset-0 bg-cover bg-[position:64%_center] bg-no-repeat md:bg-[position:82%_28%]"
-        style={{ backgroundImage: "url(/images/classic/Hero-background-v2.png)" }}
+        className="absolute inset-0 bg-no-repeat"
+        style={{
+          backgroundImage: "url(/images/classic/hero-bg.png)",
+          backgroundSize: "cover",
+          backgroundPosition: "80% bottom",
+        }}
         aria-hidden="true"
       />
       {/* Left legibility gradient */}
