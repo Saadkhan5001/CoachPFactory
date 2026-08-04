@@ -30,19 +30,20 @@ export function FinalCta() {
       <div className="relative flex flex-1 flex-col items-center justify-center px-5 py-20 text-center sm:px-6 sm:py-0">
         <Reveal>
           <h2 className="h-section max-w-2xl text-white">
-            Ready To Achieve <span className="text-[#c01d18]">Your Goals?</span>
+            Let's Find Out <span className="text-[#c01d18]">Where You Are</span>
           </h2>
         </Reveal>
         <Reveal delay={0.08}>
           <p className="mx-auto mt-5 max-w-md text-[1rem] leading-relaxed text-white/75">
-            Built through structured training and consistent work. Proven by
-            measurable progress and real client results.
+            Tell me your goal, your schedule and where you're starting from.
+            I'll tell you which package fits and what the first thirty days
+            look like. No pitch — just a plan.
           </p>
         </Reveal>
         <Reveal delay={0.16}>
           <div className="mt-8">
             <PrimaryButton size="lg" href="#top">
-              Start Your Journey
+              Book a Consult
             </PrimaryButton>
           </div>
         </Reveal>
@@ -67,7 +68,7 @@ export function FinalCta() {
             </nav>
           </div>
           <div className="text-[0.82rem] font-medium text-white/70">
-            Coach&nbsp;P — Personal Training
+            Coach&nbsp;P Factory — Personal Training, Group, Kickboxing &amp; Online
           </div>
         </div>
       </footer>

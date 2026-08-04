@@ -22,18 +22,18 @@ export function MobileFinalCta() {
       <div className="relative flex flex-col items-center px-5 pt-24 text-center" style={{ minHeight: "62svh" }}>
         <ClassicMobileReveal>
           <h2 className="cm-h-section text-white">
-            Ready To Achieve <span className="cm-accent-text">Your Goals?</span>
+            Let's Find Out <span className="cm-accent-text">Where You Are</span>
           </h2>
         </ClassicMobileReveal>
         <ClassicMobileReveal delay={70}>
           <p className="mt-4 max-w-[36ch] text-[0.95rem] leading-relaxed text-white/70">
-            Built through structured training and consistent work. Proven by measurable progress and real client
-            results.
+            Tell me your goal, your schedule and where you're starting from. I'll tell you which package fits and what
+            the first thirty days look like. No pitch — just a plan.
           </p>
         </ClassicMobileReveal>
         <ClassicMobileReveal delay={140}>
           <div className="mt-6">
-            <ClassicMobileButton href="#top">Start Your Journey</ClassicMobileButton>
+            <ClassicMobileButton href="#top">Book a Consult</ClassicMobileButton>
           </div>
         </ClassicMobileReveal>
       </div>
@@ -67,7 +67,9 @@ export function MobileFinalCta() {
             ))}
           </ul>
         </nav>
-        <p className="mt-6 text-center text-[0.85rem] text-white/45">Coach P — Personal Training</p>
+        <p className="mt-6 text-center text-[0.85rem] text-white/45">
+          Coach P Factory — Personal Training, Group, Kickboxing &amp; Online
+        </p>
       </footer>
     </section>
   );

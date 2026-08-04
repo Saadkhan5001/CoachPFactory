@@ -23,10 +23,10 @@ export function MobileServices() {
   return (
     <div id="services" className="px-5 pb-16" style={{ paddingTop: "64px" }}>
       <ClassicMobileSectionHeading
-        label="Services"
-        subtitle="This level of progress is driven by custom training, structured programming, and accountability every step of the way."
+        label="The Standard"
+        subtitle="Attention to detail — not as a slogan, as the actual method. How you set your feet, where the load sits, what your last three inches of range look like."
       >
-        Personal Training Designed Around <span className="cm-accent-text">Your Goals</span>
+        One Thing Separates This <span className="cm-accent-text">From the Rest</span>
       </ClassicMobileSectionHeading>
 
       <div className="mt-9 flex flex-col gap-3.5">

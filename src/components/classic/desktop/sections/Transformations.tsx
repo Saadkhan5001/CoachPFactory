@@ -79,13 +79,13 @@ export function Transformations() {
     >
       <div className="mx-auto flex w-[min(calc(100%_-_40px),760px)] flex-col items-center text-center">
         <PillLabel theme="dark" className="min-h-[30px] px-4 py-0 text-[13px] leading-none">
-          Client Stories
+          Results
         </PillLabel>
         <h2 className="mt-2 text-[clamp(40px,3vw,50px)] font-medium leading-[1.02] tracking-[-0.04em] text-white">
-          <span className="text-[#c01d18]">Results</span> Speak for Themselves
+          What the <span className="text-[#c01d18]">Details</span> Actually Produce
         </h2>
         <p className="mt-2.5 max-w-[600px] text-[15px] leading-[1.35] text-white/60">
-          No filters. Just discipline, consistency, and serious results. This is what happens when commitment meets a proven system.
+          The hardest part of this work isn't the training floor — it's the twenty-three hours after it. That's why every package includes a meal protocol, and why sessions are tracked.
         </p>
       </div>
 

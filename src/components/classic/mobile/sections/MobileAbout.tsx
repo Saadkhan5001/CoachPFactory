@@ -2,7 +2,7 @@ import { Award, FileBadge2, ArrowUpRight } from "lucide-react";
 import { ClassicMobileSectionHeading } from "../ClassicMobileSectionHeading";
 import { ClassicMobileButton } from "../ClassicMobileButton";
 import { ClassicMobileReveal } from "../ClassicMobileReveal";
-import { ABOUT_CREDENTIALS } from "@/lib/classic-data";
+import { ABOUT_BIO, ABOUT_CREDENTIALS } from "@/lib/classic-data";
 import { CLASSIC_BRAND } from "@/lib/classic-data";
 
 const CRED_ICON = { medal: Award, certificate: FileBadge2 };
@@ -24,9 +24,9 @@ export function MobileAbout() {
       <ClassicMobileSectionHeading
         label="About Me"
         theme="light"
-        subtitle="This level of progress is driven by custom training, structured programming, and accountability every step of the way."
+        subtitle="“My martial arts instructor was a stickler for detail. That's the same thing I bring to every session.”"
       >
-        Meet Your Coach
+        A Lifelong Athlete Who Never Left
       </ClassicMobileSectionHeading>
 
       <div className="mt-9 flex flex-col gap-3.5 px-5">
@@ -44,16 +44,8 @@ export function MobileAbout() {
         <ClassicMobileReveal delay={60}>
           <div className="rounded-3xl bg-white p-6">
             <h3 className="text-[1.9rem] font-semibold leading-tight tracking-tight">Coach P</h3>
-            <p className="mt-4 text-[0.95rem] leading-[1.5] text-black/60">
-              With over two decades in the game, I specialise in building real strength, improving conditioning, and
-              developing athletic performance. My coaching is rooted in martial-arts discipline, technical precision,
-              and measurable progression, with a clear focus on results that last rather than quick fixes.
-            </p>
-            <p className="mt-4 text-[0.95rem] leading-[1.5] text-black/60">
-              I prioritise strong fundamentals, progressive overload, and purposeful conditioning to build resilient,
-              capable athletes. I hold a high standard for the work I deliver, ensuring every programme is intentional,
-              progressive, and built around continuous improvement.
-            </p>
+            <p className="mt-4 text-[0.95rem] leading-[1.5] text-black/60">{ABOUT_BIO[0]}</p>
+            <p className="mt-4 text-[0.95rem] leading-[1.5] text-black/60">{ABOUT_BIO[1]}</p>
             <div className="mt-7">
               <ClassicMobileButton href="#contact">Get in Touch</ClassicMobileButton>
             </div>

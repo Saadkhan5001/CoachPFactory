@@ -13,10 +13,10 @@ export function MobileProcess() {
   return (
     <div id="process" className="px-5 pb-16" style={{ paddingTop: "56px" }}>
       <ClassicMobileSectionHeading
-        label="Process"
-        subtitle="A step-by-step process designed to get you real, measurable results. From your first consultation to your transformation."
+        label="How Sessions Work"
+        subtitle="You walk in, you check in, the session comes off your balance — and you can see exactly what's left. This keeps the work consistent enough for your body to answer."
       >
-        How It Works <span className="cm-accent-text">Step by Step</span>
+        Ten Sessions. Thirty Days. <span className="cm-accent-text">No Rollover.</span>
       </ClassicMobileSectionHeading>
 
       <div className="mt-9 flex flex-col gap-3.5">

@@ -35,27 +35,22 @@ export function MobileHero() {
       <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/85 via-black/30 to-transparent" aria-hidden="true" />
 
       <div className="relative px-5 pb-9" style={{ paddingTop: "calc(var(--cm-header-h) + 40px)" }}>
-        <ClassicMobileReveal>
-          <span className="inline-flex min-h-[30px] items-center rounded-full border border-white/15 bg-white/[0.08] px-4 text-[0.82rem] font-medium text-white/80 backdrop-blur-sm">
-            Personal Coach
-          </span>
-        </ClassicMobileReveal>
         {/* Heading + paragraph are width-capped so they stack on the left
             and keep the athlete (right side of the frame) fully visible. */}
         <ClassicMobileReveal delay={60}>
           <h1 className="cm-h-hero mt-4 max-w-[7.2em] text-white">
-            Meet the <span className="cm-accent-text">Stronger</span> Version of You
+            The Details Are the <span className="cm-accent-text">Difference</span>
           </h1>
         </ClassicMobileReveal>
         <ClassicMobileReveal delay={120}>
-          <p className="mt-4 max-w-[24ch] text-[0.95rem] leading-relaxed text-white/75">
-            Expert coaching built on proven methods to help you move better, build real strength, and create lasting,
-            measurable progress.
+          <p className="mt-4 max-w-[26ch] text-[0.95rem] leading-relaxed text-white/75">
+            Most people don't quit because they're lazy. They quit because nothing happened. Every session here is
+            coached to form.
           </p>
         </ClassicMobileReveal>
         <ClassicMobileReveal delay={180}>
           <div className="mt-6">
-            <ClassicMobileButton href="#contact">Get Started</ClassicMobileButton>
+            <ClassicMobileButton href="#pricing">See the Packages</ClassicMobileButton>
           </div>
         </ClassicMobileReveal>
 

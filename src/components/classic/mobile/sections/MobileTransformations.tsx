@@ -41,10 +41,10 @@ export function MobileTransformations() {
       aria-label="Client transformations"
     >
       <ClassicMobileSectionHeading
-        label="Client Stories"
-        subtitle="No filters. Just discipline, consistency, and serious results. This is what happens when commitment meets a proven system."
+        label="Results"
+        subtitle="The hardest part of this work isn't the training floor — it's the twenty-three hours after it. That's why every package includes a meal protocol, and why sessions are tracked."
       >
-        <span className="cm-accent-text">Results</span> Speak for Themselves
+        What the <span className="cm-accent-text">Details</span> Actually Produce
       </ClassicMobileSectionHeading>
 
       <ClassicMobileReveal className="mt-9">

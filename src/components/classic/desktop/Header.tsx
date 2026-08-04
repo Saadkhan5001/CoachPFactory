@@ -99,7 +99,7 @@ export function Header() {
             href="#contact"
             className="hidden h-10 items-center justify-center rounded-full bg-[#c01d18] px-5 text-[15px] font-medium text-white transition-[transform,background-color] duration-300 hover:scale-[1.03] hover:bg-[#a91814] sm:inline-flex"
           >
-            Get Started
+            Book a Consult
           </a>
           {/* Mobile toggle */}
           <button
@@ -133,7 +133,7 @@ export function Header() {
               onClick={() => setMenuOpen(false)}
               className="mt-2 rounded-full bg-[#c01d18] px-5 py-3 text-center text-[0.95rem] font-medium text-white"
             >
-              Get Started
+              Book a Consult
             </a>
           </nav>
         </div>

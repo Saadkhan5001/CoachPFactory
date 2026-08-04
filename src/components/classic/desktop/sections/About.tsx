@@ -3,7 +3,7 @@ import { SectionHeading } from "../SectionHeading";
 import { PrimaryButton } from "../PrimaryButton";
 import { Reveal } from "@/components/Reveal";
 import { SocialIcons } from "../Socials";
-import { ABOUT_CREDENTIALS } from "@/lib/classic-data";
+import { ABOUT_BIO, ABOUT_CREDENTIALS } from "@/lib/classic-data";
 
 const CRED_ICON = { medal: Award, certificate: FileBadge2 };
 
@@ -21,9 +21,9 @@ export function About() {
         className="classic-about-heading px-5 sm:px-6"
         headingStyle={{ fontSize: "clamp(2.1rem, 4.6vw, 3rem)", lineHeight: 1 }}
         subtitleStyle={{ maxWidth: "580px", lineHeight: 1.35 }}
-        subtitle="This level of progress is driven by custom training, structured programming, and accountability every step of the way."
+        subtitle="“My martial arts instructor was a stickler for detail. That's the same thing I bring to every session.”"
       >
-        Meet Your Coach
+        A Lifelong Athlete Who Never Left
       </SectionHeading>
 
       <div className="mx-auto mt-10 grid max-w-[1088px] gap-3 px-5 sm:mt-8 lg:h-[clamp(560px,42vw,608px)] lg:grid-cols-[minmax(0,0.61fr)_minmax(0,1fr)_minmax(0,1.12fr)] lg:px-6">
@@ -86,18 +86,10 @@ export function About() {
             <div>
               <h3 className="text-[2.15rem] font-semibold leading-[1.05] tracking-tight">Coach P</h3>
               <p className="mt-4 text-[0.95rem] leading-[1.42] text-black/60">
-                With over two decades in the game, I specialise in building real
-                strength, improving conditioning, and developing athletic
-                performance. My coaching is rooted in martial-arts discipline,
-                technical precision, and measurable progression, with a clear
-                focus on results that last rather than quick fixes.
+                {ABOUT_BIO[0]}
               </p>
               <p className="mt-5 text-[0.95rem] leading-[1.42] text-black/60">
-                I prioritise strong fundamentals, progressive overload, and
-                purposeful conditioning to build resilient, capable athletes. I
-                hold a high standard for the work I deliver, ensuring every
-                programme is intentional, progressive, and built around
-                continuous improvement.
+                {ABOUT_BIO[1]}
               </p>
             </div>
             <div className="mt-8 flex flex-col items-start gap-5 sm:mt-auto sm:flex-row sm:items-end sm:justify-between">

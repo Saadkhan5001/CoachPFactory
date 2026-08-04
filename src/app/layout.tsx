@@ -10,13 +10,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Coach P Factory — Strength, Conditioning & Performance Coaching",
+  title: "Coach P Factory — Personal Training, Group & Online",
   description:
-    "Coach P Factory — performance coaching built on 20+ years of experience, technique and discipline. Strength, conditioning and competition prep for athletes and individuals ready to put in the work.",
+    "32 years under the bar. Technique-first personal training, group sessions, kickboxing, bodybuilding protocols and online coaching. Every rep coached to form.",
   openGraph: {
-    title: "Coach P Factory — Built in the Factory",
+    title: "Coach P Factory — Personal Training, Group & Online",
     description:
-      "Performance coaching where disciplined, technical work is turned into real results. Strength, conditioning, agility and stage prep with Coach P.",
+      "32 years under the bar. Technique-first personal training, group sessions, kickboxing, bodybuilding protocols and online coaching. Every rep coached to form.",
     siteName: "Coach P Factory",
     type: "website",
   },

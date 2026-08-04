@@ -1,10 +1,13 @@
-// Coach P — /classic route content.
-// This is a template-faithful adaptation of the original personal-trainer
-// landing page, minimally rebranded for Coach P (Pierrot Massenat).
+// Coach P Factory — main site content.
 //
-// NOTE: Prices, satisfaction %, client totals and testimonials below are
-// TEMPLATE / CONCEPT content carried over to preserve the reference composition.
-// They are NOT confirmed Coach P figures and must be treated as demonstrative.
+// Copy is sourced from the approved Coach P Factory copy document
+// (coach-p-factory reference, Aug 2026). Design/layout remains the
+// approved "classic" experience — only content lives here.
+//
+// NOTE: Services, Process, Reviews and FAQ copy is carried over from the
+// approved classic version (no counterpart in the copy document).
+// Transformation/review imagery remains placeholder until real client
+// photos are supplied. Online-package pricing is on request per the doc.
 
 export const CLASSIC_BRAND = {
   name: "Coach P",
@@ -13,86 +16,91 @@ export const CLASSIC_BRAND = {
 
 export const NAV_LINKS = [
   { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Client Stories", href: "#stories" },
-  { label: "Pricing", href: "#pricing" },
+  { label: "The Standard", href: "#services" },
+  { label: "Results", href: "#stories" },
+  { label: "Packages", href: "#pricing" },
   { label: "FAQ", href: "#faq" },
 ];
 
-// Template/concept figures — see file header.
 export const HERO_STATS = [
-  { value: "99", suffix: "%", label: "Satisfaction Rate" },
-  { value: "250", suffix: "+", label: "Clients Transformed" },
+  { value: "32", suffix: "", label: "Years Under the Bar" },
+  { value: "10", suffix: "", label: "Sessions per Package" },
 ];
 
 export const ABOUT_CREDENTIALS = [
   {
-    title: "Experienced Athlete",
-    subtitle: "Two decades of training",
+    title: "32 Years Under the Bar",
+    subtitle: "Training since age sixteen",
     icon: "medal" as const,
   },
   {
-    title: "Performance Coach",
-    subtitle: "Strength & conditioning",
+    title: "Martial Arts Background",
+    subtitle: "Five to six years of fighting",
     icon: "certificate" as const,
   },
 ];
 
+export const ABOUT_BIO = [
+  "Soccer, football, volleyball, track. Then martial arts, and five to six years of fighting. At sixteen, a friend put him on a bench press for the first time — he fell in love with it that day. The pain, the work, the feeling afterward. That was three decades ago, and it hasn't let up since.",
+  "Training became the way he relates to everything else. The gym is where you learn to meet resistance, stay consistent when nothing seems to be happening, and keep showing up until it does. His first paying client came at eighteen, from a stranger on the gym floor. Today that experience runs through 1-on-1 training, small group sessions, kickboxing, bodybuilding protocols and online coaching — with the same standard applied to all of them.",
+];
+
+// "The standard" content from the copy doc, mapped onto the four service cards.
 export const SERVICES = [
   {
-    title: "Build Real Strength",
-    body: "Progressive strength training focused on real numbers, solid technique, and long-term gains.",
+    title: "Form Is Coached, Not Assumed",
+    body: "Every exercise gets corrected in real time. The better you execute a movement, the more efficiently the body responds — and the sooner you see it in the mirror.",
     image: "/images/classic/svc-strength.jpg",
   },
   {
-    title: "Elite Conditioning",
-    body: "Develop real endurance that supports stronger, more consistent training.",
+    title: "Fast, the Honest Way",
+    body: "The goal is to get you to results before frustration wins — without shortcuts. Efficient work beats extra work every time.",
     image: "/images/classic/svc-conditioning.jpg",
   },
   {
-    title: "Injury Prevention",
-    body: "Training designed to reduce the risk of injury.",
+    title: "Injuries End Programs",
+    body: "Sloppy reps are how people get hurt and disappear for six weeks. Precision keeps you in the gym long enough to change.",
     icon: "bone" as const,
   },
   {
-    title: "Expert Nutrition",
-    body: "Strategic dietary guidance for long-term results.",
+    title: "Meal Protocols Included",
+    body: "Custom per-meal fat, protein and carb targets, set to how many meals a day you actually eat.",
     image: "/images/classic/svc-nutrition.jpg",
   },
 ];
 
+// "How sessions work" content from the copy doc, as the five process steps.
 export const PROCESS_STEPS = [
   {
     number: "01",
-    title: "Discovery Call",
-    body: "We dive into your goals, current challenges, and lifestyle to create a clear, strategic direction forward.",
+    title: "Pick Your Lane",
+    body: "Choose your package — 1-on-1, group, kickboxing, bodybuilding or online. Your balance is set the moment you buy.",
   },
   {
     number: "02",
-    title: "Personalised Plan",
-    body: "A tailored training and nutrition strategy built around your lifestyle and targets.",
+    title: "Book Your Slot",
+    body: "Choose the time window that fits your day. The most requested windows go early, so lock in the slot you want.",
   },
   {
     number: "03",
-    title: "Guided Training",
-    body: "Structured training sessions with expert feedback, consistent support, and real accountability.",
+    title: "Check In at the Door",
+    body: "One tap when you arrive. The session comes off the package and your balance updates on your phone.",
   },
   {
     number: "04",
-    title: "Progress Tracking",
-    body: "We closely monitor performance, body metrics, and make smart, data-driven adjustments.",
+    title: "Follow the Protocol",
+    body: "Measurements, weight tracking and a meal protocol cover the twenty-three hours a day you're not on the floor.",
   },
   {
     number: "05",
-    title: "Level Up",
-    body: "Once you hit your goal, we raise the standard and push you to the next level forward together.",
+    title: "Finish the Cycle",
+    body: "Thirty days from your first session. Unused sessions don't roll over — which is exactly why they get used.",
   },
 ];
 
-// Template/concept figures — see file header.
 export const PROCESS_STATS = [
-  { value: "450", suffix: "+", label: "Custom Plans Built" },
-  { value: "95", suffix: "%", label: "Consistency Rate" },
+  { value: "10", suffix: "", label: "Sessions per Cycle" },
+  { value: "30", suffix: "", label: "Days to Use Them" },
 ];
 
 export type Transformation = {
@@ -103,31 +111,23 @@ export type Transformation = {
   after: string;
 };
 
-// Concept client stories (template content), rebranded to Coach P.
+// Real client results from the copy document (placeholder imagery).
 export const TRANSFORMATIONS: Transformation[] = [
   {
     quote:
-      "I started this program feeling stuck with my weight and depression. Through consistent training and accountability, I lost weight, built muscle, and feel stronger, healthier, and genuinely happy again. Thank you, coach!",
-    name: "David",
-    meta: "In-person Training | 9 Months",
+      "She'd been in the gym six or seven months with nothing to show for it, walked up on the floor and asked for help. First month training together, nine pounds down. Everything since has been built on what that month proved.",
+    name: "The First Client",
+    meta: "9 lbs down in her first month",
     before: "/images/classic/before-david.jpg",
     after: "/images/classic/after-david.jpg",
   },
   {
     quote:
-      "Coach P took my lifting to a new level. I wasn't sure how much progress I had left, but with structured programming and feedback, I broke through plateaus and moved into powerlifting. My strength and confidence grew, and my training finally had direction.",
-    name: "Tom",
-    meta: "In-person Training | 18 Months",
+      "He arrived at 280 with a hard deadline and impeccable discipline — calling before meals he wasn't sure about. Cardio, resistance, diet, consistency. He made the academy.",
+    name: "Police Academy Candidate, 22",
+    meta: "40 lbs down in three months — 18 in the first",
     before: "/images/classic/before-mike.jpg",
     after: "/images/classic/after-david.jpg",
-  },
-  {
-    quote:
-      "As a mum of two, I struggled with my weight and finding time for myself. Coach P helped me lose weight, build strength, and regain my energy without sacrificing family time. I now feel strong, confident, and proud of what my body can do.",
-    name: "Claudia",
-    meta: "In-person Training | 5 Months",
-    before: "/images/classic/before-mike.jpg",
-    after: "/images/classic/before-david.jpg",
   },
 ];
 
@@ -138,7 +138,7 @@ export type Review = {
   avatar: string;
 };
 
-// Concept reviews (template content), rebranded to Coach P.
+// Concept reviews carried over from the approved classic version.
 export const REVIEWS: Review[] = [
   {
     quote:
@@ -177,71 +177,226 @@ export const REVIEWS: Review[] = [
   },
 ];
 
-// Template/concept pricing — NOT confirmed Coach P rates (see file header).
-export const PRICING = [
+export type PricingFeature = { label: string; highlight: boolean };
+
+export type PricingPlan = {
+  name: string;
+  window: string;
+  body: string;
+  price: string; // "$95" or "On request"
+  period: string; // "/session", "/month" or ""
+  total?: string;
+  featured: boolean;
+  features: PricingFeature[];
+};
+
+export type PricingCategory = {
+  key: "solo" | "group" | "build" | "online";
+  label: string;
+  note: string;
+  plans: PricingPlan[];
+};
+
+const INCLUDED_1ON1: PricingFeature[] = [
+  { label: "Measurements & weight tracking", highlight: false },
+  { label: "Custom meal protocol", highlight: false },
+  { label: "Fat, protein & carb targets per meal", highlight: false },
+  { label: "Meal frequency set to your day", highlight: false },
+];
+
+const GROUP_FEATURES: PricingFeature[] = [
+  { label: "Small group format", highlight: false },
+  { label: "Form corrected every round", highlight: false },
+  { label: "Progressive programming", highlight: false },
+];
+
+export const PRICING_CATEGORIES: PricingCategory[] = [
   {
-    name: "Online Training",
-    icon: "globe" as const,
-    body: "Personalized online coaching with direct support and clear, immediate action.",
-    price: "$299",
-    period: "/month",
-    featured: false,
-    features: [
-      { label: "Initial consultation", highlight: false },
-      { label: "Personalized action plan", highlight: false },
-      { label: "Nutrition guidance", highlight: false },
-      { label: "Tracking & accountability", highlight: false },
+    key: "solo",
+    label: "1-on-1",
+    note: "All 1-on-1 packages are ten sessions and include full measurement, meal and macro protocols.",
+    plans: [
+      {
+        name: "First Light",
+        window: "Before 7:00 AM",
+        body: "The quiet hour. Limited slots, priced accordingly — you get the floor and my full attention before the day starts.",
+        price: "$95",
+        period: "/session",
+        total: "10 sessions — $950",
+        featured: false,
+        features: INCLUDED_1ON1,
+      },
+      {
+        name: "Midday",
+        window: "8:00 AM – 12:00 PM",
+        body: "The best value on the board. Same coaching, same protocol, in the calmest stretch of the day.",
+        price: "$60",
+        period: "/session",
+        total: "10 sessions — $600",
+        featured: true,
+        features: INCLUDED_1ON1,
+      },
+      {
+        name: "After Hours",
+        window: "3:00 PM – 7:00 PM",
+        body: "Straight from work to the floor. The most requested window, so book the slot you want early.",
+        price: "$75",
+        period: "/session",
+        total: "10 sessions — $750",
+        featured: false,
+        features: INCLUDED_1ON1,
+      },
     ],
   },
   {
-    name: "In-Person Training",
-    icon: "users" as const,
-    body: "Face to face, in-person coaching that delivers direct guidance and fast, actionable results.",
-    price: "$1499",
-    period: "/month",
-    featured: true,
-    features: [
-      { label: "In-person weekly sessions", highlight: true },
-      { label: "Initial consultation", highlight: false },
-      { label: "Personalized action plan", highlight: false },
-      { label: "Nutrition guidance", highlight: false },
-      { label: "Tracking & accountability", highlight: false },
+    key: "group",
+    label: "Group",
+    note: "Group packages are ten sessions. Bring someone — accountability travels well.",
+    plans: [
+      {
+        name: "Morning Group",
+        window: "8:00 AM – 12:00 PM",
+        body: "Small group training with the same technique standard. Coached, not just supervised.",
+        price: "$40",
+        period: "/session",
+        total: "10 sessions — $400",
+        featured: false,
+        features: GROUP_FEATURES,
+      },
+      {
+        name: "Evening Group",
+        window: "3:00 PM – 8:00 PM",
+        body: "The after-work group. Higher energy, same attention to how you move.",
+        price: "$50",
+        period: "/session",
+        total: "10 sessions — $500",
+        featured: false,
+        features: GROUP_FEATURES,
+      },
+      {
+        name: "Kickboxing",
+        window: "Scheduled blocks",
+        body: "Striking mechanics, conditioning and footwork — drawn straight from the fight years.",
+        price: "$60",
+        period: "/session",
+        total: "10 sessions — $600",
+        featured: false,
+        features: [
+          { label: "Technique-led striking", highlight: false },
+          { label: "Conditioning built in", highlight: false },
+          { label: "All levels welcome", highlight: false },
+        ],
+      },
+    ],
+  },
+  {
+    key: "build",
+    label: "Bodybuilding",
+    note: "Bodybuilding packages run monthly rather than in ten-session blocks.",
+    plans: [
+      {
+        name: "Full Build",
+        window: "5 days per week",
+        body: "Hands-on competition-level programming. Five days a week on the floor with me.",
+        price: "$1,000",
+        period: "/month",
+        total: "Billed monthly",
+        featured: false,
+        features: [
+          { label: "1-on-1 training, 5 days a week", highlight: true },
+          { label: "Meal protocols", highlight: false },
+          { label: "Supplement protocols (men & women)", highlight: false },
+          { label: "Ongoing adjustments", highlight: false },
+        ],
+      },
+      {
+        name: "Guided Build",
+        window: "Self-run + check-ins",
+        body: "You run the workload, I set it and stay in it — including a leg day session to check your execution.",
+        price: "$800",
+        period: "/month",
+        total: "Billed monthly",
+        featured: false,
+        features: [
+          { label: "Programmed workload & protocols", highlight: false },
+          { label: "Periodic check-ins", highlight: false },
+          { label: "One coached session to verify form", highlight: false },
+          { label: "Lifting & training support", highlight: false },
+        ],
+      },
+    ],
+  },
+  {
+    key: "online",
+    label: "Online",
+    note: "Pricing for online packages is available on request.",
+    plans: [
+      {
+        name: "Follow Along",
+        window: "Self-paced",
+        body: "Pre-recorded sessions you train alongside, with every movement demonstrated the way it gets coached in person.",
+        price: "On request",
+        period: "",
+        total: "Ask about package pricing",
+        featured: false,
+        features: [
+          { label: "Full video library", highlight: false },
+          { label: "Structured programming", highlight: false },
+          { label: "Train on your schedule", highlight: false },
+        ],
+      },
+      {
+        name: "Hold My Hand",
+        window: "Live & guided",
+        body: "Virtual training with me on the other end — real-time coaching, real-time corrections.",
+        price: "On request",
+        period: "",
+        total: "Ask about package pricing",
+        featured: false,
+        features: [
+          { label: "Live virtual sessions", highlight: true },
+          { label: "Real-time form correction", highlight: false },
+          { label: "Meal protocol included", highlight: false },
+          { label: "Direct access between sessions", highlight: false },
+        ],
+      },
     ],
   },
 ];
 
+// Grounded in the copy doc: session ledger, 30-day cycle, package inclusions.
 export const FAQS = [
   {
-    q: "How does getting started work?",
-    a: "It begins with a free discovery call where we discuss your goals, training history, and lifestyle. From there I build a tailored plan and we schedule your first session — usually within the same week.",
+    q: "How do the ten-session packages work?",
+    a: "Every package is ten sessions. You book your slot, check in when you arrive, and the session comes off your balance — you can see exactly what's left at any time.",
   },
   {
-    q: "Do I need a gym membership?",
-    a: "For in-person training, sessions run at a private training facility, so no separate membership is required. For online coaching, any well-equipped gym works, and I can adapt programs to home setups too.",
+    q: "Why do sessions expire after thirty days?",
+    a: "Ten sessions stretched across three months isn't training — it's a membership. Thirty days keeps the work consistent enough for your body to answer. Unused sessions don't roll over, which is exactly why they get used.",
+  },
+  {
+    q: "What's included with 1-on-1 packages?",
+    a: "Measurements and weight tracking, plus a custom meal protocol with fat, protein and carb targets for every meal — set to how many meals a day you're eating.",
+  },
+  {
+    q: "What's the difference between the online packages?",
+    a: "Follow Along is pre-recorded sessions you train alongside, with every movement demonstrated the way it gets coached in person. Hold My Hand is live virtual training — real-time coaching, real-time corrections, with a meal protocol included.",
+  },
+  {
+    q: "What's the kickboxing training like?",
+    a: "Striking mechanics, conditioning and footwork, drawn straight from five to six years of competitive fighting. Technique-led, with all levels welcome.",
   },
   {
     q: "I'm just starting out, is that okay?",
     a: "Absolutely. A large share of my clients start as complete beginners. Every program is built around your current level, focusing on solid fundamentals and safe, progressive overload from day one.",
   },
-  {
-    q: "What's the difference between online and in-person training?",
-    a: "In-person training includes hands-on coaching, live technique correction, and weekly face-to-face sessions. Online coaching gives you the same structured programming and accountability with remote check-ins and video feedback.",
-  },
-  {
-    q: "Do you offer flexible scheduling?",
-    a: "Yes. Sessions are booked around your availability, and online clients train entirely on their own schedule. If life gets busy, we adjust the plan rather than break momentum.",
-  },
-  {
-    q: "Can I pause or cancel my training at any time?",
-    a: "Of course. There are no long lock-in contracts. You can pause between blocks or cancel with a week's notice — the goal is lasting progress, not pressure.",
-  },
 ];
 
 export const FOOTER_LINKS = [
   { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Client Stories", href: "#stories" },
-  { label: "Pricing", href: "#pricing" },
+  { label: "The Standard", href: "#services" },
+  { label: "Results", href: "#stories" },
+  { label: "Packages", href: "#pricing" },
   { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
 ];

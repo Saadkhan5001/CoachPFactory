@@ -83,7 +83,7 @@ export function ClassicMobileHeader() {
                   onClick={() => setOpen(false)}
                   className="mt-2 block rounded-full bg-[#c01d18] px-5 py-3.5 text-center text-[0.98rem] font-medium text-white"
                 >
-                  Get Started
+                  Book a Consult
                 </a>
               </li>
             </ul>

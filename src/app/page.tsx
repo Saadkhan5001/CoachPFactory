@@ -1,45 +1,20 @@
-import { Header } from "@/components/Header";
-import { Motion } from "@/components/Motion";
-import { Hero } from "@/components/sections/Hero";
-import { About } from "@/components/sections/About";
-import { Services } from "@/components/sections/Services";
-import { Process } from "@/components/sections/Process";
-import { Transformations } from "@/components/sections/Transformations";
-import { AcademyPreview } from "@/components/academy/AcademyPreview";
-import { Reviews } from "@/components/sections/Reviews";
-import { Pricing } from "@/components/sections/Pricing";
-import { Faq } from "@/components/sections/Faq";
-import { FinalCta } from "@/components/sections/FinalCta";
+import "./classic.css";
+import "./mobile.css";
+import { ClassicResponsiveShell } from "@/components/classic/ClassicResponsiveShell";
 
+/**
+ * Coach P Factory — main (and only) route.
+ *
+ * Two fully separate, approved experiences, one mounted at a time by
+ * ClassicResponsiveShell:
+ *  - Desktop (fine pointer, >768px): src/components/classic/desktop/ —
+ *    Lenis + GSAP counter-translate panel transitions (shared Motion.tsx).
+ *  - Mobile / coarse pointer: src/components/classic/mobile/ — native
+ *    scrolling, IntersectionObserver reveals, browser-native CSS-sticky
+ *    section stacking. No GSAP, no Lenis.
+ *
+ * See CLASSIC_RESPONSIVE_HANDOVER.md for the architecture and QA guide.
+ */
 export default function Home() {
-  return (
-    <>
-      <Motion />
-      <Header />
-      <main className="relative">
-        <Hero />
-        <About />
-
-        {/* Dark block — rises over the light About panel (pinned reveal) */}
-        <section
-          id="services-panel"
-          data-nav-theme="dark"
-          data-rise
-          className="panel-reveal rounded-panel-top relative z-[3] bg-ink pb-4"
-        >
-          <Services />
-          <Process />
-          <Transformations />
-          <AcademyPreview />
-          <Reviews />
-        </section>
-
-        {/* Coaching options — stays pinned while FAQ rises over it */}
-        <Pricing />
-
-        <Faq />
-        <FinalCta />
-      </main>
-    </>
-  );
+  return <ClassicResponsiveShell />;
 }

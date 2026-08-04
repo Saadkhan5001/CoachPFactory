@@ -2,7 +2,7 @@ import { SectionHeading } from "../SectionHeading";
 import { PrimaryButton } from "../PrimaryButton";
 import { Reveal } from "@/components/Reveal";
 import { CountUp } from "@/components/CountUp";
-import { PROCESS_STEPS } from "@/lib/classic-data";
+import { PROCESS_STEPS, PROCESS_STATS } from "@/lib/classic-data";
 
 function StepCard({
   number,
@@ -29,8 +29,8 @@ function StepCard({
 export function Process() {
   return (
     <div id="process" className="mx-auto max-w-content-classic px-5 pt-24 sm:pt-32 lg:px-6">
-      <SectionHeading label="Process" subtitle="A step-by-step process designed to get you real, measurable results. From your first consultation to your transformation.">
-        How It Works <span className="text-[#c01d18]">Step by Step</span>
+      <SectionHeading label="How Sessions Work" subtitle="You walk in, you check in, the session comes off your balance — and you can see exactly what's left. This keeps the work consistent enough for your body to answer.">
+        Ten Sessions. Thirty Days. <span className="text-[#c01d18]">No Rollover.</span>
       </SectionHeading>
 
       <div className="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
@@ -42,14 +42,12 @@ export function Process() {
               style={{ backgroundImage: "url(/images/classic/proc-equip.jpg)" }}
             />
             <div className="absolute inset-0 bg-black/45" />
-            <div className="relative rounded-2xl border border-white/10 bg-white/[0.06] px-5 py-4 backdrop-blur-md">
-              <CountUp value={450} suffix="+" suffixClassName="text-[#c01d18]" className="text-[1.9rem] font-semibold leading-none text-white" />
-              <span className="mt-1 block text-[0.85rem] text-white/75">Custom Plans Built</span>
-            </div>
-            <div className="relative rounded-2xl border border-white/10 bg-white/[0.06] px-5 py-4 backdrop-blur-md">
-              <CountUp value={95} suffix="%" suffixClassName="text-[#c01d18]" className="text-[1.9rem] font-semibold leading-none text-white" />
-              <span className="mt-1 block text-[0.85rem] text-white/75">Consistency Rate</span>
-            </div>
+            {PROCESS_STATS.map((stat) => (
+              <div key={stat.label} className="relative rounded-2xl border border-white/10 bg-white/[0.06] px-5 py-4 backdrop-blur-md">
+                <CountUp value={Number(stat.value)} suffix={stat.suffix} suffixClassName="text-[#c01d18]" className="text-[1.9rem] font-semibold leading-none text-white" />
+                <span className="mt-1 block text-[0.85rem] text-white/75">{stat.label}</span>
+              </div>
+            ))}
           </article>
         </Reveal>
 
