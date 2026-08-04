@@ -70,6 +70,7 @@ export function MobileFinalCta() {
         <p className="mt-6 text-center text-[0.85rem] text-white/45">
           Coach P Factory — Personal Training, Group, Kickboxing &amp; Online
         </p>
+        <p className="mt-1.5 text-center text-[0.8rem] text-white/35">Built by NodeVision</p>
       </footer>
     </section>
   );

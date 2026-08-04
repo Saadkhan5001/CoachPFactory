@@ -2,7 +2,7 @@ import { Award, FileBadge2, ArrowUpRight } from "lucide-react";
 import { ClassicMobileSectionHeading } from "../ClassicMobileSectionHeading";
 import { ClassicMobileButton } from "../ClassicMobileButton";
 import { ClassicMobileReveal } from "../ClassicMobileReveal";
-import { ABOUT_BIO, ABOUT_CREDENTIALS } from "@/lib/classic-data";
+import { ABOUT_BIO, ABOUT_CREDENTIALS, ABOUT_TIMELINE } from "@/lib/classic-data";
 import { CLASSIC_BRAND } from "@/lib/classic-data";
 
 const CRED_ICON = { medal: Award, certificate: FileBadge2 };
@@ -64,6 +64,21 @@ export function MobileAbout() {
                   <circle cx="17.2" cy="6.8" r="0.9" fill="currentColor" stroke="none" />
                 </svg>
               </a>
+            </div>
+          </div>
+        </ClassicMobileReveal>
+
+        {/* The road here — bio timeline */}
+        <ClassicMobileReveal delay={60}>
+          <div className="rounded-3xl bg-white p-6">
+            <p className="text-[0.78rem] font-semibold uppercase tracking-[0.08em] text-[#c01d18]">The Road Here</p>
+            <div className="mt-4 flex flex-col">
+              {ABOUT_TIMELINE.map((t, i) => (
+                <div key={t.when} className={`py-3.5 ${i === 0 ? "" : "border-t border-black/10"}`}>
+                  <p className="text-[0.88rem] font-semibold">{t.when}</p>
+                  <p className="mt-1 text-[0.88rem] leading-relaxed text-black/55">{t.what}</p>
+                </div>
+              ))}
             </div>
           </div>
         </ClassicMobileReveal>

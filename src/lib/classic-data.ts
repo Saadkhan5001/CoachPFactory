@@ -42,7 +42,31 @@ export const ABOUT_CREDENTIALS = [
 
 export const ABOUT_BIO = [
   "Soccer, football, volleyball, track. Then martial arts, and five to six years of fighting. At sixteen, a friend put him on a bench press for the first time — he fell in love with it that day. The pain, the work, the feeling afterward. That was three decades ago, and it hasn't let up since.",
-  "Training became the way he relates to everything else. The gym is where you learn to meet resistance, stay consistent when nothing seems to be happening, and keep showing up until it does. His first paying client came at eighteen, from a stranger on the gym floor. Today that experience runs through 1-on-1 training, small group sessions, kickboxing, bodybuilding protocols and online coaching — with the same standard applied to all of them.",
+  "Training became the way he relates to everything else. The gym is where you learn to meet resistance, stay consistent when nothing seems to be happening, and keep showing up until it does. That's the part he coaches, alongside the reps. Today that experience runs through 1-on-1 training, small group sessions, kickboxing, bodybuilding protocols and online coaching — with the same standard applied to all of them.",
+];
+
+// The road here — bio timeline from the copy doc.
+export const ABOUT_TIMELINE = [
+  {
+    when: "Age 10",
+    what: "Competitive sport begins — soccer, football, volleyball, track.",
+  },
+  {
+    when: "Teens",
+    what: "Martial arts. Five to six years of fighting, under an instructor obsessed with detail.",
+  },
+  {
+    when: "Age 16",
+    what: "First time on a bench press. Never stopped.",
+  },
+  {
+    when: "Age 18–19",
+    what: "First paying client, from a stranger on the gym floor.",
+  },
+  {
+    when: "Today",
+    what: "32 years training. 1-on-1, group, kickboxing, bodybuilding and online coaching.",
+  },
 ];
 
 // "The standard" content from the copy doc, mapped onto the four service cards.

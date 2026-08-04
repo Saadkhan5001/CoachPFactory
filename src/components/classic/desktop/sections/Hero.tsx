@@ -59,7 +59,7 @@ export function Hero() {
             </p>
           </Reveal>
           <Reveal delay={0.28}>
-            <div className="mt-7 md:mt-[39px]">
+            <div className="mt-7 flex flex-wrap items-center gap-3 md:mt-[39px]">
               <PrimaryButton
                 size="lg"
                 href="#pricing"
@@ -67,6 +67,12 @@ export function Hero() {
               >
                 See the Packages
               </PrimaryButton>
+              <a
+                href="#contact"
+                className="inline-flex h-[42px] items-center rounded-full border border-white/35 bg-black/20 px-6 text-[16px] font-medium text-white/90 backdrop-blur-sm transition-colors hover:bg-white/10 hover:text-white"
+              >
+                Talk to Coach P First
+              </a>
             </div>
           </Reveal>
         </div>

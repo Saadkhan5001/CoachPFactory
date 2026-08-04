@@ -3,6 +3,7 @@ import { PrimaryButton } from "../PrimaryButton";
 import { Reveal } from "@/components/Reveal";
 import { CountUp } from "@/components/CountUp";
 import { PROCESS_STEPS, PROCESS_STATS } from "@/lib/classic-data";
+import { SessionLedger } from "../../SessionLedger";
 
 function StepCard({
   number,
@@ -83,6 +84,11 @@ export function Process() {
               </div>
             </div>
           </article>
+        </Reveal>
+
+        {/* Session ledger demo — full-width row */}
+        <Reveal delay={0.08} className="sm:col-span-2 lg:col-span-4">
+          <SessionLedger />
         </Reveal>
       </div>
     </div>

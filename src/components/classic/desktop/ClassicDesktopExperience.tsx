@@ -8,6 +8,7 @@ import { Services } from "./sections/Services";
 import { Process } from "./sections/Process";
 import { Transformations } from "./sections/Transformations";
 import { Reviews } from "./sections/Reviews";
+import { Academy } from "./sections/Academy";
 import { Pricing } from "./sections/Pricing";
 import { Faq } from "./sections/Faq";
 import { FinalCta } from "./sections/FinalCta";
@@ -43,6 +44,7 @@ export function ClassicDesktopExperience() {
           <Process />
           <Transformations />
           <Reviews />
+          <Academy />
         </section>
 
         {/* Pricing — held while FAQ rises over it */}

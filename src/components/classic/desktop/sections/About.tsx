@@ -3,7 +3,7 @@ import { SectionHeading } from "../SectionHeading";
 import { PrimaryButton } from "../PrimaryButton";
 import { Reveal } from "@/components/Reveal";
 import { SocialIcons } from "../Socials";
-import { ABOUT_BIO, ABOUT_CREDENTIALS } from "@/lib/classic-data";
+import { ABOUT_BIO, ABOUT_CREDENTIALS, ABOUT_TIMELINE } from "@/lib/classic-data";
 
 const CRED_ICON = { medal: Award, certificate: FileBadge2 };
 
@@ -100,6 +100,25 @@ export function About() {
                 <span className="text-[0.85rem] text-black/50">Follow me:</span>
                 <SocialIcons variant="light" />
               </div>
+            </div>
+          </div>
+        </Reveal>
+      </div>
+
+      {/* The road here — bio timeline */}
+      <div className="mx-auto mt-3 max-w-[1088px] px-5 lg:px-6">
+        <Reveal delay={0.1}>
+          <div className="rounded-3xl bg-white p-6 sm:p-8">
+            <p className="text-[0.8rem] font-semibold uppercase tracking-[0.08em] text-[#c01d18]">
+              The Road Here
+            </p>
+            <div className="mt-5 grid gap-x-6 gap-y-5 sm:grid-cols-2 lg:grid-cols-5">
+              {ABOUT_TIMELINE.map((t) => (
+                <div key={t.when} className="border-t border-black/10 pt-3">
+                  <p className="text-[0.85rem] font-semibold text-black">{t.when}</p>
+                  <p className="mt-1.5 text-[0.85rem] leading-relaxed text-black/55">{t.what}</p>
+                </div>
+              ))}
             </div>
           </div>
         </Reveal>

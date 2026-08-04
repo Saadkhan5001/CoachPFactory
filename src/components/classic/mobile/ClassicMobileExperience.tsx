@@ -8,6 +8,7 @@ import { MobileServices } from "./sections/MobileServices";
 import { MobileProcess } from "./sections/MobileProcess";
 import { MobileTransformations } from "./sections/MobileTransformations";
 import { MobileReviews } from "./sections/MobileReviews";
+import { MobileAcademy } from "./sections/MobileAcademy";
 import { MobilePricing } from "./sections/MobilePricing";
 import { MobileFaq } from "./sections/MobileFaq";
 import { MobileFinalCta } from "./sections/MobileFinalCta";
@@ -44,6 +45,7 @@ export function ClassicMobileExperience() {
               <MobileProcess />
               <MobileTransformations />
               <MobileReviews />
+              <MobileAcademy />
             </div>
           }
         />

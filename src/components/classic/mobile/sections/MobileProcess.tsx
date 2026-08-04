@@ -3,6 +3,7 @@ import { ClassicMobileButton } from "../ClassicMobileButton";
 import { ClassicMobileReveal } from "../ClassicMobileReveal";
 import { CountUp } from "@/components/CountUp";
 import { PROCESS_STEPS, PROCESS_STATS } from "@/lib/classic-data";
+import { SessionLedger } from "../../SessionLedger";
 
 /**
  * Mobile Process, per the reference recording: heading → image stat card
@@ -59,6 +60,11 @@ export function MobileProcess() {
             </article>
           </ClassicMobileReveal>
         ))}
+
+        {/* Session ledger demo */}
+        <ClassicMobileReveal>
+          <SessionLedger />
+        </ClassicMobileReveal>
 
         {/* Promo card */}
         <ClassicMobileReveal>

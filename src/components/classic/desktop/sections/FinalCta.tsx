@@ -67,8 +67,13 @@ export function FinalCta() {
               ))}
             </nav>
           </div>
-          <div className="text-[0.82rem] font-medium text-white/70">
-            Coach&nbsp;P Factory — Personal Training, Group, Kickboxing &amp; Online
+          <div className="text-right">
+            <div className="text-[0.82rem] font-medium text-white/70">
+              Coach&nbsp;P Factory — Personal Training, Group, Kickboxing &amp; Online
+            </div>
+            <div className="mt-1 text-[0.78rem] text-white/40">
+              Built by NodeVision
+            </div>
           </div>
         </div>
       </footer>

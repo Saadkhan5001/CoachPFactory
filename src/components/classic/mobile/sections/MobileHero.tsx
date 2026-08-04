@@ -49,8 +49,14 @@ export function MobileHero() {
           </p>
         </ClassicMobileReveal>
         <ClassicMobileReveal delay={180}>
-          <div className="mt-6">
+          <div className="mt-6 flex flex-wrap items-center gap-3">
             <ClassicMobileButton href="#pricing">See the Packages</ClassicMobileButton>
+            <a
+              href="#contact"
+              className="inline-flex min-h-[44px] items-center rounded-full border border-white/35 bg-black/25 px-5 text-[0.95rem] font-medium text-white/90 backdrop-blur-sm active:bg-white/10"
+            >
+              Talk to Coach P First
+            </a>
           </div>
         </ClassicMobileReveal>
 
