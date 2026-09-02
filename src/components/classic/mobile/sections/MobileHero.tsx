@@ -1,3 +1,4 @@
+import { MessageCircle } from "lucide-react";
 import { ClassicMobileButton } from "../ClassicMobileButton";
 import { ClassicMobileReveal } from "../ClassicMobileReveal";
 import { CountUp } from "@/components/CountUp";
@@ -44,8 +45,8 @@ export function MobileHero() {
         </ClassicMobileReveal>
         <ClassicMobileReveal delay={120}>
           <p className="mt-4 max-w-[26ch] text-[0.95rem] leading-relaxed text-white/75">
-            Most people don't quit because they're lazy. They quit because nothing happened. Every session here is
-            coached to form.
+            People don&rsquo;t quit from laziness &mdash; they quit when results stall. Form-focused coaching means
+            fewer injuries, less wasted effort, and a body that responds.
           </p>
         </ClassicMobileReveal>
         <ClassicMobileReveal delay={180}>
@@ -53,9 +54,10 @@ export function MobileHero() {
             <ClassicMobileButton href="#pricing">See the Packages</ClassicMobileButton>
             <a
               href="#contact"
-              className="inline-flex min-h-[44px] items-center rounded-full border border-white/35 bg-black/25 px-5 text-[0.95rem] font-medium text-white/90 backdrop-blur-sm active:bg-white/10"
+              className="inline-flex min-h-[44px] items-center gap-2 rounded-full border border-white/35 bg-black/25 pl-4 pr-5 text-[0.95rem] font-medium text-white/90 backdrop-blur-sm active:bg-white/10"
             >
-              Talk to Coach P First
+              <MessageCircle className="h-[17px] w-[17px]" strokeWidth={1.9} />
+              Chat with Coach P
             </a>
           </div>
         </ClassicMobileReveal>

@@ -24,9 +24,9 @@ export function MobileAbout() {
       <ClassicMobileSectionHeading
         label="About Me"
         theme="light"
-        subtitle="“My martial arts instructor was a stickler for detail. That's the same thing I bring to every session.”"
+        subtitle="Thirty-two years under the bar — and the same standard applied to every session since."
       >
-        A Lifelong Athlete Who Never Left
+        A Lifelong Athlete
       </ClassicMobileSectionHeading>
 
       <div className="mt-9 flex flex-col gap-3.5 px-5">
@@ -44,8 +44,11 @@ export function MobileAbout() {
         <ClassicMobileReveal delay={60}>
           <div className="rounded-3xl bg-white p-6">
             <h3 className="text-[1.9rem] font-semibold leading-tight tracking-tight">Coach P</h3>
-            <p className="mt-4 text-[0.95rem] leading-[1.5] text-black/60">{ABOUT_BIO[0]}</p>
-            <p className="mt-4 text-[0.95rem] leading-[1.5] text-black/60">{ABOUT_BIO[1]}</p>
+            {ABOUT_BIO.map((para, i) => (
+              <p key={i} className="mt-4 text-[0.95rem] leading-[1.5] text-black/60">
+                {para}
+              </p>
+            ))}
             <div className="mt-7">
               <ClassicMobileButton href="#contact">Get in Touch</ClassicMobileButton>
             </div>
@@ -106,7 +109,7 @@ export function MobileAbout() {
           <div className="relative h-[210px] overflow-hidden rounded-3xl">
             <div
               className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: "url(/images/classic/gym-location.jpg)" }}
+              style={{ backgroundImage: "url(/images/classic/svc-strength.jpg)" }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/40" />
             <div className="relative flex h-full flex-col justify-between p-5">

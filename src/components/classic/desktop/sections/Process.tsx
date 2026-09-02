@@ -19,9 +19,17 @@ function StepCard({
       <span className="text-[2.6rem] font-semibold leading-none text-white/15">
         {number}
       </span>
+      {/* The text block is bottom-anchored, so any extra wrapped line — in
+          the title or the body — would lift that card's heading above its
+          neighbours'. Reserving two title lines and five body lines keeps
+          every heading on the same baseline at every column width. */}
       <div>
-        <h3 className="text-[1.2rem] font-semibold text-white">{title}</h3>
-        <p className="mt-2 text-[0.9rem] leading-relaxed text-white/55">{body}</p>
+        <h3 className="min-h-[2.75em] text-[1.2rem] font-semibold leading-snug text-white">
+          {title}
+        </h3>
+        <p className="mt-2 min-h-[8.2em] text-[0.9rem] leading-relaxed text-white/55">
+          {body}
+        </p>
       </div>
     </article>
   );

@@ -1,82 +1,76 @@
-import { Bone } from "lucide-react";
 import { ClassicMobileSectionHeading } from "../ClassicMobileSectionHeading";
 import { ClassicMobileReveal } from "../ClassicMobileReveal";
-import { SERVICES } from "@/lib/classic-data";
-
-function AvocadoIcon({ className = "" }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true">
-      <path d="M12 22c-4 0-7-3.2-7-7.5C5 9 8 3 12 2c4 1 7 7 7 12.5 0 4.3-3 7.5-7 7.5Z" />
-      <circle cx="12" cy="15" r="2.6" />
-    </svg>
-  );
-}
+import {
+  STANDARD_DETAILS,
+  STANDARD_PRINCIPLES,
+  STANDARD_QUOTE,
+} from "@/lib/classic-data";
 
 /**
- * Mobile Services, per the reference recording: full-width stacked cards —
- * Build Real Strength dominant (tall image), Elite Conditioning secondary
- * (image with text at bottom), then Injury Prevention (plain dark card,
- * centered icon) and Expert Nutrition (image card, centered icon).
+ * Mobile "The Standard" — mirrors the desktop rebuild: concrete details
+ * strip, three numbered principles, then Coach P's quote. Typography-led
+ * rather than photo-led so the message reads on a small screen instead of
+ * competing with stock imagery.
  */
 export function MobileServices() {
-  const [strength, conditioning, injury, nutrition] = SERVICES;
   return (
     <div id="services" className="px-5 pb-16" style={{ paddingTop: "64px" }}>
       <ClassicMobileSectionHeading
         label="The Standard"
-        subtitle="Attention to detail — not as a slogan, as the actual method. How you set your feet, where the load sits, what your last three inches of range look like."
+        subtitle="Attention to detail — not as a slogan, as the actual method. Get the small things right and everything downstream gets faster."
       >
         One Thing Separates This <span className="cm-accent-text">From the Rest</span>
       </ClassicMobileSectionHeading>
 
-      <div className="mt-9 flex flex-col gap-3.5">
-        {/* Dominant card */}
-        <ClassicMobileReveal>
-          <article className="relative flex min-h-[430px] flex-col justify-end overflow-hidden rounded-3xl">
-            <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${strength.image})` }} />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent" />
-            <div className="relative p-6 text-center">
-              <h3 className="text-[1.55rem] font-semibold text-white">{strength.title}</h3>
-              <p className="mx-auto mt-2.5 max-w-[30ch] text-[0.92rem] leading-relaxed text-white/70">{strength.body}</p>
-            </div>
-          </article>
-        </ClassicMobileReveal>
+      {/* The specifics — what "detail" actually means */}
+      <ClassicMobileReveal className="mt-9">
+        <div className="overflow-hidden rounded-2xl bg-white/[0.08]">
+          <div className="flex flex-col gap-px">
+            {STANDARD_DETAILS.map((detail) => (
+              <div key={detail} className="flex items-center gap-3 bg-[#0f0f0f] px-5 py-4">
+                <span className="h-px w-5 shrink-0 bg-[#c01d18]" aria-hidden="true" />
+                <span className="text-[0.92rem] font-medium text-white/85">{detail}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </ClassicMobileReveal>
 
-        {/* Secondary image card */}
-        <ClassicMobileReveal delay={60}>
-          <article className="relative flex min-h-[330px] flex-col justify-end overflow-hidden rounded-3xl bg-[#141414]">
-            <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${conditioning.image})` }} />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
-            <div className="relative p-6 text-center">
-              <h3 className="text-[1.35rem] font-semibold text-white">{conditioning.title}</h3>
-              <p className="mx-auto mt-2 max-w-[32ch] text-[0.9rem] leading-relaxed text-white/70">{conditioning.body}</p>
-            </div>
-          </article>
-        </ClassicMobileReveal>
-
-        {/* Supporting cards */}
-        <ClassicMobileReveal delay={60}>
-          <article className="flex min-h-[240px] flex-col items-center justify-center rounded-3xl bg-[#141414] p-6 text-center">
-            <span className="mb-4 flex h-11 w-11 items-center justify-center">
-              <Bone className="h-7 w-7 text-white" strokeWidth={1.6} />
-            </span>
-            <h3 className="text-[1.2rem] font-semibold text-white">{injury.title}</h3>
-            <p className="mt-2 max-w-[30ch] text-[0.9rem] leading-relaxed text-white/60">{injury.body}</p>
-          </article>
-        </ClassicMobileReveal>
-
-        <ClassicMobileReveal delay={60}>
-          <article className="relative flex min-h-[260px] flex-col items-center justify-center overflow-hidden rounded-3xl p-6 text-center">
-            <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${nutrition.image})` }} />
-            <div className="absolute inset-0 bg-black/55" />
-            <span className="relative mb-4 flex h-11 w-11 items-center justify-center">
-              <AvocadoIcon className="h-7 w-7 text-white" />
-            </span>
-            <h3 className="relative text-[1.2rem] font-semibold text-white">{nutrition.title}</h3>
-            <p className="relative mt-2 max-w-[30ch] text-[0.9rem] leading-relaxed text-white/70">{nutrition.body}</p>
-          </article>
-        </ClassicMobileReveal>
+      {/* The three principles */}
+      <div className="mt-3.5 flex flex-col gap-3.5">
+        {STANDARD_PRINCIPLES.map((p, i) => (
+          <ClassicMobileReveal key={p.n} delay={i * 60}>
+            <article className="relative overflow-hidden rounded-3xl bg-[#141414] p-6">
+              <span
+                className="pointer-events-none absolute -right-1 -top-4 select-none text-[5rem] font-semibold leading-none text-white/[0.04]"
+                aria-hidden="true"
+              >
+                {p.n}
+              </span>
+              <span className="relative text-[0.74rem] font-semibold uppercase tracking-[0.14em] text-[#c01d18]">
+                {p.label}
+              </span>
+              <h3 className="relative mt-3 text-[1.3rem] font-semibold leading-[1.2] text-white">
+                {p.title}
+              </h3>
+              <p className="relative mt-2.5 text-[0.92rem] leading-relaxed text-white/60">{p.body}</p>
+              <span className="relative mt-5 block h-[2px] w-10 bg-[#c01d18]" aria-hidden="true" />
+            </article>
+          </ClassicMobileReveal>
+        ))}
       </div>
+
+      {/* Coach P's own words */}
+      <ClassicMobileReveal delay={60} className="mt-3.5">
+        <figure className="overflow-hidden rounded-3xl border-l-[3px] border-[#c01d18] bg-[#141414] p-6">
+          <blockquote className="text-[1.15rem] font-semibold leading-[1.3] tracking-[-0.01em] text-white">
+            &ldquo;{STANDARD_QUOTE.quote}&rdquo;
+          </blockquote>
+          <figcaption className="mt-4 text-[0.78rem] font-medium uppercase tracking-[0.14em] text-white/45">
+            {STANDARD_QUOTE.attribution}
+          </figcaption>
+        </figure>
+      </ClassicMobileReveal>
     </div>
   );
 }

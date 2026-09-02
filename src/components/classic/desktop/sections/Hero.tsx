@@ -1,3 +1,4 @@
+import { MessageCircle } from "lucide-react";
 import { PrimaryButton } from "../PrimaryButton";
 import { StatCard } from "../StatCard";
 import { Reveal } from "@/components/Reveal";
@@ -52,10 +53,9 @@ export function Hero() {
           </Reveal>
           <Reveal delay={0.2}>
             <p className="mt-5 max-w-[520px] text-[15px] font-normal leading-[1.45] tracking-[-0.015em] text-white/[0.91] md:mt-[28px] md:text-[16px] md:leading-[1.3]">
-              Most people don't quit because they're lazy. They quit because
-              nothing happened. Every session here is coached to form — because
-              clean technique means fewer injuries, less wasted effort, and a
-              body that responds on schedule.
+              People don’t quit from laziness - they quit when results stall.
+              Form-focused coaching means fewer injuries, less wasted effort,
+              and a body that responds.
             </p>
           </Reveal>
           <Reveal delay={0.28}>
@@ -69,9 +69,10 @@ export function Hero() {
               </PrimaryButton>
               <a
                 href="#contact"
-                className="inline-flex h-[42px] items-center rounded-full border border-white/35 bg-black/20 px-6 text-[16px] font-medium text-white/90 backdrop-blur-sm transition-colors hover:bg-white/10 hover:text-white"
+                className="inline-flex h-[42px] items-center gap-2 rounded-full border border-white/35 bg-black/20 pl-5 pr-6 text-[16px] font-medium text-white/90 backdrop-blur-sm transition-colors hover:bg-white/10 hover:text-white"
               >
-                Talk to Coach P First
+                <MessageCircle className="h-[18px] w-[18px]" strokeWidth={1.9} />
+                Chat with Coach P
               </a>
             </div>
           </Reveal>

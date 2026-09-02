@@ -23,7 +23,7 @@ export const NAV_LINKS = [
 ];
 
 export const HERO_STATS = [
-  { value: "32", suffix: "", label: "Years Under the Bar" },
+  { value: "32", suffix: "", label: "Years Experience" },
   { value: "10", suffix: "", label: "Sessions per Package" },
 ];
 
@@ -42,7 +42,8 @@ export const ABOUT_CREDENTIALS = [
 
 export const ABOUT_BIO = [
   "Soccer, football, volleyball, track. Then martial arts, and five to six years of fighting. At sixteen, a friend put him on a bench press for the first time — he fell in love with it that day. The pain, the work, the feeling afterward. That was three decades ago, and it hasn't let up since.",
-  "Training became the way he relates to everything else. The gym is where you learn to meet resistance, stay consistent when nothing seems to be happening, and keep showing up until it does. That's the part he coaches, alongside the reps. Today that experience runs through 1-on-1 training, small group sessions, kickboxing, bodybuilding protocols and online coaching — with the same standard applied to all of them.",
+  "Training became the way he relates to everything else. The gym is where you learn to meet resistance, stay consistent when nothing seems to be happening, and keep showing up until it does. That's the part he coaches, alongside the reps.",
+  "Today that experience runs through 1-on-1 training, small group sessions, kickboxing, bodybuilding protocols and online coaching — with the same standard applied to all of them.",
 ];
 
 // The road here — bio timeline from the copy doc.
@@ -69,29 +70,43 @@ export const ABOUT_TIMELINE = [
   },
 ];
 
-// "The standard" content from the copy doc, mapped onto the four service cards.
-export const SERVICES = [
+// "The standard" — the copy doc's three principles, plus the concrete
+// details that define what "attention to detail" actually means and the
+// Coach P quote that anchors the section.
+
+/** The specifics, verbatim from the copy doc's lede — what detail means. */
+export const STANDARD_DETAILS = [
+  "How you set your feet",
+  "Where the load sits",
+  "Your last three inches of range",
+];
+
+export const STANDARD_PRINCIPLES = [
   {
+    n: "01",
+    label: "Technique First",
     title: "Form Is Coached, Not Assumed",
     body: "Every exercise gets corrected in real time. The better you execute a movement, the more efficiently the body responds — and the sooner you see it in the mirror.",
-    image: "/images/classic/svc-strength.jpg",
   },
   {
+    n: "02",
+    label: "Fewer Setbacks",
+    title: "Injuries End Programs",
+    body: "Sloppy reps are how people get hurt and disappear for six weeks. Precision isn't slower — it's what keeps you in the gym long enough to change.",
+  },
+  {
+    n: "03",
+    label: "No Corners Cut",
     title: "Fast, the Honest Way",
     body: "The goal is to get you to results before frustration wins — without shortcuts. Efficient work beats extra work every time.",
-    image: "/images/classic/svc-conditioning.jpg",
-  },
-  {
-    title: "Injuries End Programs",
-    body: "Sloppy reps are how people get hurt and disappear for six weeks. Precision keeps you in the gym long enough to change.",
-    icon: "bone" as const,
-  },
-  {
-    title: "Meal Protocols Included",
-    body: "Custom per-meal fat, protein and carb targets, set to how many meals a day you actually eat.",
-    image: "/images/classic/svc-nutrition.jpg",
   },
 ];
+
+export const STANDARD_QUOTE = {
+  quote:
+    "My martial arts instructor was a stickler for detail. That's the same thing I bring to every session.",
+  attribution: "Coach P",
+};
 
 // "How sessions work" content from the copy doc, as the five process steps.
 export const PROCESS_STEPS = [
@@ -218,6 +233,8 @@ export type PricingCategory = {
   key: "solo" | "group" | "build" | "online";
   label: string;
   note: string;
+  /** Card background visual for this lane, shown under a heavy dark scrim. */
+  image: string;
   plans: PricingPlan[];
 };
 
@@ -239,6 +256,7 @@ export const PRICING_CATEGORIES: PricingCategory[] = [
     key: "solo",
     label: "1-on-1",
     note: "All 1-on-1 packages are ten sessions and include full measurement, meal and macro protocols.",
+    image: "/images/classic/svc-strength.jpg",
     plans: [
       {
         name: "First Light",
@@ -276,6 +294,7 @@ export const PRICING_CATEGORIES: PricingCategory[] = [
     key: "group",
     label: "Group",
     note: "Group packages are ten sessions. Bring someone — accountability travels well.",
+    image: "/images/classic/svc-conditioning.jpg",
     plans: [
       {
         name: "Morning Group",
@@ -317,6 +336,7 @@ export const PRICING_CATEGORIES: PricingCategory[] = [
     key: "build",
     label: "Bodybuilding",
     note: "Bodybuilding packages run monthly rather than in ten-session blocks.",
+    image: "/images/classic/Meet-coach.jpg",
     plans: [
       {
         name: "Full Build",
@@ -354,6 +374,7 @@ export const PRICING_CATEGORIES: PricingCategory[] = [
     key: "online",
     label: "Online",
     note: "Pricing for online packages is available on request.",
+    image: "/images/classic/cta-bg.jpg",
     plans: [
       {
         name: "Follow Along",

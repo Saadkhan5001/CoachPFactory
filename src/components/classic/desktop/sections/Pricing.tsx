@@ -93,21 +93,31 @@ export function Pricing() {
                   </span>
                 )}
 
-                {/* Header panel */}
-                <div className="rounded-[20px] bg-dark-card p-6 text-white">
-                  <p className="text-[0.78rem] font-semibold uppercase tracking-[0.08em] text-[#ff5a54]">
+                {/* Header panel — lane visual under a heavy scrim so the
+                    price and copy keep full contrast. */}
+                <div className="relative overflow-hidden rounded-[20px] bg-dark-card p-6 text-white">
+                  <div
+                    className="absolute inset-0 bg-cover bg-center"
+                    style={{ backgroundImage: `url(${active.image})`, opacity: 0.32 }}
+                    aria-hidden="true"
+                  />
+                  <div
+                    className="absolute inset-0 bg-gradient-to-br from-[#141414]/88 via-[#141414]/70 to-[#141414]/45"
+                    aria-hidden="true"
+                  />
+                  <p className="relative text-[0.78rem] font-semibold uppercase tracking-[0.08em] text-[#ff5a54]">
                     {plan.window}
                   </p>
-                  <div className="mt-2 flex items-center gap-2.5">
+                  <div className="relative mt-2 flex items-center gap-2.5">
                     <Icon className="h-5 w-5" strokeWidth={1.9} />
                     <h3 className="text-[1.25rem] font-semibold">{plan.name}</h3>
                   </div>
                   {/* Reserve three lines so price, total and button align across
                       every card in the row regardless of blurb length. */}
-                  <p className="mt-3 min-h-[4.9em] text-[0.92rem] leading-relaxed text-white/60">
+                  <p className="relative mt-3 min-h-[4.9em] text-[0.92rem] leading-relaxed text-white/70">
                     {plan.body}
                   </p>
-                  <div className="mt-6 flex items-baseline gap-1">
+                  <div className="relative mt-6 flex items-baseline gap-1">
                     <span className="text-[2.4rem] font-semibold leading-none">
                       {plan.price}
                     </span>
@@ -115,10 +125,10 @@ export function Pricing() {
                       <span className="text-[0.95rem] text-white/55">{plan.period}</span>
                     )}
                   </div>
-                  <p className="mt-2 text-[0.85rem] text-white/50">{plan.total ?? " "}</p>
+                  <p className="relative mt-2 text-[0.85rem] text-white/50">{plan.total ?? " "}</p>
                   <a
                     href="#contact"
-                    className="mt-5 flex w-full justify-center sm:w-fit items-center gap-2 rounded-full bg-[#c01d18] px-5 py-2 text-[0.92rem] font-medium text-white transition-[transform,background-color] hover:scale-[1.03] hover:bg-[#a91814]"
+                    className="relative mt-5 flex w-full justify-center sm:w-fit items-center gap-2 rounded-full bg-[#c01d18] px-5 py-2 text-[0.92rem] font-medium text-white transition-[transform,background-color] hover:scale-[1.03] hover:bg-[#a91814]"
                   >
                     Get Started
                     <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#0f0f0f] text-white">
