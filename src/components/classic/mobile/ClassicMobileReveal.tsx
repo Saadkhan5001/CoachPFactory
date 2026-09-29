@@ -7,6 +7,9 @@ type Props = {
   /** Stagger delay in ms, applied to the transition only. */
   delay?: number;
   className?: string;
+  /** Reveal on mount instead of on scroll — for above-the-fold content
+      (e.g. the hero) that may sit inside the observer's bottom margin. */
+  eager?: boolean;
 };
 
 /**
@@ -16,7 +19,7 @@ type Props = {
  * Never wrap `.cm-stack` / `.cm-stack-held` / `.cm-stack-riser` in this —
  * a transformed ancestor silently breaks sticky positioning.
  */
-export function ClassicMobileReveal({ children, delay = 0, className = "" }: Props) {
+export function ClassicMobileReveal({ children, delay = 0, className = "", eager = false }: Props) {
   const ref = useRef<HTMLDivElement | null>(null);
   const [shown, setShown] = useState(false);
 
@@ -26,6 +29,11 @@ export function ClassicMobileReveal({ children, delay = 0, className = "" }: Pro
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       setShown(true);
       return;
+    }
+    if (eager) {
+      // Next task, so the hidden state paints first and the transition runs.
+      const t = window.setTimeout(() => setShown(true), 30);
+      return () => window.clearTimeout(t);
     }
     const io = new IntersectionObserver(
       (entries) => {
@@ -38,7 +46,7 @@ export function ClassicMobileReveal({ children, delay = 0, className = "" }: Pro
     );
     io.observe(el);
     return () => io.disconnect();
-  }, []);
+  }, [eager]);
 
   return (
     <div
