@@ -9,17 +9,29 @@ export function Hero() {
     <section
       id="top"
       data-nav-theme="dark"
-      className="relative z-[1] min-h-[100svh] w-full overflow-hidden bg-[#151d1f]"
+      className="relative z-[1] min-h-[100svh] w-full overflow-hidden bg-[#121212]"
     >
-      {/* Photographic background — full-bleed cover, anchored to the
-          bottom so any overflow is trimmed from the empty space above his
-          head rather than his legs/feet. */}
+      {/* Photographic background. The 1600×900 source has his head ~5%
+          from the top edge, so plain `cover` put it behind the fixed
+          header (and cropped it on wide screens). Instead the photo box
+          is sized to the section height minus a header clearance and
+          anchored bottom at 80% horizontally, so the full figure always
+          sits below the nav. Its top/side edges are feathered into the
+          dark section background, which matches the photo's dark wall. */}
       <div
-        className="absolute inset-0 bg-no-repeat"
+        className="absolute bottom-0 bg-cover bg-no-repeat"
         style={{
-          backgroundImage: "url(/images/classic/hero-bg.png)",
-          backgroundSize: "cover",
-          backgroundPosition: "80% bottom",
+          backgroundImage: "url(/images/classic/hero-bg.jpeg)",
+          height: "calc(100% - 110px)",
+          aspectRatio: "1600 / 900",
+          left: "80%",
+          transform: "translateX(-80%)",
+          maskImage:
+            "linear-gradient(to right, transparent, #000 8%, #000 92%, transparent), linear-gradient(to bottom, transparent, #000 4%)",
+          maskComposite: "intersect",
+          WebkitMaskImage:
+            "linear-gradient(to right, transparent, #000 8%, #000 92%, transparent), linear-gradient(to bottom, transparent, #000 4%)",
+          WebkitMaskComposite: "source-in",
         }}
         aria-hidden="true"
       />

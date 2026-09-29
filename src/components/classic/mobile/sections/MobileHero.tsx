@@ -5,46 +5,44 @@ import { CountUp } from "@/components/CountUp";
 import { HERO_STATS } from "@/lib/classic-data";
 
 /**
- * Mobile hero, per the reference recording: ~75% viewport-height image
- * (subject right, text left-aligned), pill label, heading, paragraph,
- * CTA, then two glass stat cards side by side. The white About panel's
- * rounded edge peeks below in normal flow.
+ * Mobile hero: the coach photo in its own band directly below the fixed
+ * header, then heading, paragraph, CTAs and two glass stat cards. The
+ * white About panel's rounded edge peeks below in normal flow.
  */
 export function MobileHero() {
   return (
-    <section id="top" data-nav-theme="dark" className="relative flex flex-col justify-end overflow-hidden bg-[#0f0f0f]" style={{ minHeight: "78svh" }}>
-      {/* Mobile framing: the source is a wide 1600×837 landscape with the
-          athlete at ~63–92% of its width and his head almost touching the top
-          edge. Plain `cover` height-fits it, so a phone shows only a ~37%-wide
-          slice — at the old 62% anchor the face/right arm were cut by the
-          window edge and the head sat behind the fixed header. Instead:
-          size slightly under height-cover (auto 88%), anchor bottom so the
-          figure gains headroom below the header, and anchor 80% so the full
-          body sits inside the right half of the frame. The band above the
-          image blends into the section's #0f0f0f via the top gradient. */}
-      <div
-        className="absolute inset-0 bg-no-repeat"
-        style={{
-          backgroundImage: "url(/images/classic/hero-bg.png)",
-          backgroundSize: "auto 88%",
-          backgroundPosition: "84% bottom",
-        }}
-        aria-hidden="true"
-      />
-      <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#0f0f0f] to-transparent" aria-hidden="true" />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/35 to-black/10" aria-hidden="true" />
-      <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/85 via-black/30 to-transparent" aria-hidden="true" />
+    <section id="top" data-nav-theme="dark" className="relative overflow-hidden bg-[#0f0f0f]">
+      {/* The 1600×900 source is landscape with the athlete at ~63–86% of
+          its width and his head ~5% from the top edge. On a phone any text
+          laid over the photo lands on his face/body, and a full-height
+          background puts his head behind the fixed header. So the photo
+          gets its own band that starts below the header, is height-fitted
+          and anchored right so the whole figure (head to shoes) is in frame
+          and nothing overlaps him. Only the band's bottom edge is feathered
+          into the section background. */}
+      <div style={{ paddingTop: "calc(var(--cm-header-h) + 24px)" }}>
+        <div
+          className="bg-cover bg-no-repeat"
+          style={{
+            height: "clamp(340px, 46svh, 520px)",
+            backgroundImage: "url(/images/classic/hero-bg.jpeg)",
+            backgroundPosition: "right bottom",
+            maskImage: "linear-gradient(to bottom, #000 94%, transparent)",
+            WebkitMaskImage: "linear-gradient(to bottom, #000 94%, transparent)",
+          }}
+          role="img"
+          aria-label="Coach P in the gym"
+        />
+      </div>
 
-      <div className="relative px-5 pb-9" style={{ paddingTop: "calc(var(--cm-header-h) + 40px)" }}>
-        {/* Heading + paragraph are width-capped so they stack on the left
-            and keep the athlete (right side of the frame) fully visible. */}
+      <div className="relative px-5 pb-9">
         <ClassicMobileReveal delay={60}>
-          <h1 className="cm-h-hero mt-4 max-w-[7.2em] text-white">
+          <h1 className="cm-h-hero mt-6 text-white">
             The Details Are the <span className="cm-accent-text">Difference</span>
           </h1>
         </ClassicMobileReveal>
         <ClassicMobileReveal delay={120}>
-          <p className="mt-4 max-w-[26ch] text-[0.95rem] leading-relaxed text-white/75">
+          <p className="mt-4 max-w-[34ch] text-[0.95rem] leading-relaxed text-white/75">
             People don&rsquo;t quit from laziness &mdash; they quit when results stall. Form-focused coaching means
             fewer injuries, less wasted effort, and a body that responds.
           </p>

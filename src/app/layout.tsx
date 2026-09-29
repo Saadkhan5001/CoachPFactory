@@ -9,7 +9,11 @@ const inter = Inter({
   weight: ["400", "500", "600", "700"],
 });
 
+const SITE_URL = "https://coachpfactory.com";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  alternates: { canonical: "/" },
   title: "Coach P Factory — Personal Training, Group & Online",
   description:
     "32 years under the bar. Technique-first personal training, group sessions, kickboxing, bodybuilding protocols and online coaching. Every rep coached to form.",
@@ -18,6 +22,7 @@ export const metadata: Metadata = {
     description:
       "32 years under the bar. Technique-first personal training, group sessions, kickboxing, bodybuilding protocols and online coaching. Every rep coached to form.",
     siteName: "Coach P Factory",
+    url: SITE_URL,
     type: "website",
   },
 };
